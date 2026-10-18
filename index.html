@@ -1,1 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pramod Kumar Satyawali, Chess Coach and FIDE Approved National Instructor (NI), helps students build chess skills, tournament confidence, concentration and strategic thinking." />
+  <meta name="theme-color" content="#101b17" />
+  <meta property="og:title" content="Pramod Kumar Satyawali | Chess Coach & National Instructor" />
+  <meta property="og:description" content="Structured chess coaching focused on openings, tactics, strategy, endgames and tournament preparation." />
+  <meta property="og:type" content="website" />
+  <title>Pramod Kumar Satyawali | Chess Coach & National Instructor</title>
 
+  <style>
+    :root {
+      --bg: #101b17;
+      --bg-soft: #172720;
+      --panel: #1c3027;
+      --panel-2: #233b30;
+      --cream: #f5f0e4;
+      --muted: #b9c8bd;
+      --gold: #e2bd72;
+      --gold-dark: #c89c48;
+      --line: rgba(245, 240, 228, .13);
+      --radius: 22px;
+      --max-width: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; width: 100%; overflow-x: clip; }
+    body {
+      margin: 0; width: 100%; min-width: 0; overflow-x: clip;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--cream); line-height: 1.7;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(226,189,114,.10), transparent 34%),
+        radial-gradient(ellipse at 90% 25%, rgba(75,132,99,.16), transparent 35%), var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+    .wrap { width: min(var(--max-width), calc(100% - 48px)); margin-inline: auto; min-width: 0; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:22px; min-height:86px; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:11px; font-weight:850; letter-spacing:-.4px; }
+    .brand-mark { display:grid; place-items:center; width:42px; height:42px; border-radius:12px; background:var(--gold); color:#17231b; font-size:1.6rem; }
+    .brand-text { line-height:1.25; }
+    .brand-text small { display:block; margin-top:4px; color:var(--muted); font-size:.68rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; }
+    nav { display:flex; align-items:center; flex-wrap:wrap; gap:26px; }
+    nav a { color:var(--muted); font-size:.92rem; transition:color .2s ease; }
+    nav a:hover { color:var(--gold); }
+    .hero { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr); align-items:center; gap:70px; padding:88px 0 76px; }
+    .eyebrow, .section-label { color:var(--gold); font-size:.78rem; font-weight:850; letter-spacing:2px; text-transform:uppercase; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; }
+    .eyebrow::before { content:""; width:28px; height:2px; background:var(--gold); }
+    h1 { max-width:760px; margin:20px 0 18px; font-family:Georgia, "Times New Roman", serif; font-size:clamp(2.7rem,5.7vw,5rem); line-height:1.04; letter-spacing:-2px; font-weight:700; }
+    h1 span { color:var(--gold); }
+    .intro { max-width:650px; color:var(--muted); font-size:1.08rem; line-height:1.9; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:47px; padding:12px 19px; border:1px solid var(--line); border-radius:12px; font-size:.92rem; font-weight:750; text-align:center; transition:transform .2s ease, background .2s ease, border-color .2s ease; }
+    .btn:hover { transform:translateY(-2px); border-color:var(--gold); }
+    .btn-primary { background:var(--gold); color:#17231b; border-color:transparent; }
+    .btn-primary:hover { background:#f0d49b; }
+    .coach-art { position:relative; max-width:430px; width:100%; justify-self:end; }
+    .coach-card { position:relative; overflow:hidden; padding:30px; border:1px solid rgba(226,189,114,.3); border-radius:30px; background:linear-gradient(150deg,rgba(35,59,48,.98),rgba(18,32,25,.98)); box-shadow:0 28px 80px rgba(0,0,0,.25); text-align:center; animation:float 6s ease-in-out infinite; }
+    .coach-card::before { content:""; position:absolute; width:260px; height:260px; border:1px solid rgba(226,189,114,.14); border-radius:50%; top:-150px; right:-100px; }
+    .coach-card > * { position:relative; z-index:1; }
+    .portrait-frame { display:grid; place-items:center; width:205px; height:205px; margin:8px auto 22px; border:5px solid var(--gold); border-radius:50%; overflow:hidden; background:linear-gradient(145deg,#365443,#17271f); box-shadow:0 0 0 9px rgba(226,189,114,.09),0 18px 40px rgba(0,0,0,.28); }
+    .portrait { width:100%; height:100%; object-fit:cover; object-position:center 25%; }
+    .portrait[hidden], .portrait-fallback[hidden] { display:none !important; }
+    .portrait-fallback { display:grid; place-items:center; width:100%; height:100%; color:var(--gold); font-family:Georgia,serif; font-size:4rem; font-weight:800; }
+    .coach-card h2 { margin:0 0 5px; font-family:Georgia,serif; font-size:1.65rem; line-height:1.3; }
+    .coach-card p { margin:0; color:var(--muted); }
+    .credential { display:inline-flex; justify-content:center; align-items:center; gap:8px; margin-top:17px; padding:8px 13px; border:1px solid rgba(226,189,114,.25); border-radius:999px; color:#f3dba9; background:rgba(226,189,114,.08); font-size:.78rem; font-weight:750; }
+    .credential::before { content:"♔"; font-size:1rem; }
+    .board-strip { display:grid; grid-template-columns:repeat(6,1fr); gap:0; overflow:hidden; margin-top:24px; border-radius:10px; border:1px solid rgba(245,240,228,.12); }
+    .board-strip span { aspect-ratio:1; display:grid; place-items:center; font-size:clamp(1rem,2vw,1.6rem); }
+    .board-strip span:nth-child(odd) { background:#e9dfc8; color:#1c3027; }
+    .board-strip span:nth-child(even) { background:#536f5c; color:#f5f0e4; }
+    section { padding:62px 0; min-width:0; }
+    .section-head { margin-bottom:28px; }
+    .section-label { display:block; margin-bottom:9px; }
+    .section-title { margin:0 0 10px; font-family:Georgia,serif; font-size:clamp(2rem,3.5vw,2.8rem); line-height:1.2; letter-spacing:-.8px; }
+    .section-head p, .muted { margin:0; color:var(--muted); }
+    .section-head p { max-width:720px; }
+    .about-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr); gap:20px; }
+    .card { min-width:0; padding:28px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(28,48,39,.78); transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease; }
+    .card:hover { transform:translateY(-4px); border-color:rgba(226,189,114,.35); box-shadow:0 18px 40px rgba(0,0,0,.14); }
+    .about-card p { margin:0 0 15px; color:var(--muted); }
+    .about-card p:last-child { margin-bottom:0; }
+    .quote-card { display:flex; flex-direction:column; justify-content:center; background:linear-gradient(145deg,rgba(226,189,114,.12),rgba(28,48,39,.75)); }
+    .quote-mark { color:var(--gold); font-family:Georgia,serif; font-size:4rem; line-height:1; }
+    .quote-card h3 { margin:10px 0; font-family:Georgia,serif; font-size:1.5rem; line-height:1.35; }
+    .quote-card p { margin:0; color:var(--muted); }
+    .training-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+    .training-card { padding:23px; }
+    .training-number { display:grid; place-items:center; width:46px; height:46px; margin-bottom:20px; border-radius:14px; background:rgba(226,189,114,.12); color:var(--gold); font-family:Georgia,serif; font-size:1.25rem; font-weight:800; }
+    .training-card h3 { margin:0 0 8px; font-size:1.08rem; }
+    .training-card p { margin:0; color:var(--muted); font-size:.92rem; }
+    .values { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .value-card h3 { margin:0 0 8px; font-size:1.05rem; }
+    .value-card p { margin:0; color:var(--muted); font-size:.93rem; }
+    .value-icon { color:var(--gold); font-size:1.6rem; margin-bottom:10px; }
+    .contact-card { display:flex; align-items:center; justify-content:space-between; gap:30px; padding:38px; background:radial-gradient(ellipse at 100% 0%,rgba(226,189,114,.13),transparent 55%),var(--panel); }
+    .contact-card > div:first-child { min-width:0; }
+    .contact-card .section-title { margin-bottom:12px; }
+    .contact-card p { max-width:620px; margin:0; color:var(--muted); }
+    footer { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:50px; padding:25px 0 32px; border-top:1px solid var(--line); color:var(--muted); font-size:.86rem; }
+    footer p { margin:0; }
+    @keyframes fadeUp { from {opacity:0;transform:translateY(20px)} to {opacity:1;transform:translateY(0)} }
+    @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-7px)} }
+    .hero-copy { animation:fadeUp .7s ease both; }
+    .coach-art { animation:fadeUp .85s .12s ease both; }
+    .js-motion .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease,transform .6s ease; }
+    .js-motion .reveal.is-visible { opacity:1; transform:translateY(0); }
+    @media (min-width:651px) and (max-width:1000px) {
+      .hero { gap:30px; padding-top:65px; grid-template-columns:minmax(0,1fr) minmax(250px,.8fr); }
+      .coach-art { max-width:340px; }
+      .coach-card { padding:24px 18px; }
+      .portrait-frame { width:165px; height:165px; }
+      .training-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .about-grid { grid-template-columns:1fr; }
+      nav { gap:16px; }
+    }
+    @media (max-width:650px) {
+      .wrap { width:calc(100% - 32px); }
+      header { align-items:flex-start; flex-direction:column; gap:17px; padding:18px 0; }
+      .brand { align-items:flex-start; }
+      nav { width:100%; justify-content:flex-start; gap:9px 19px; }
+      nav a { font-size:.88rem; }
+      .hero { display:flex; flex-direction:column; align-items:stretch; gap:32px; padding:48px 0 28px; }
+      h1 { font-size:clamp(2.45rem,10vw,3.7rem); letter-spacing:-1.4px; }
+      .intro { font-size:.98rem; line-height:1.8; }
+      .coach-art { max-width:360px; margin-inline:auto; align-self:center; }
+      .coach-card { padding:25px 18px; border-radius:24px; }
+      .portrait-frame { width:165px; height:165px; }
+      .coach-card h2 { font-size:1.45rem; }
+      section { padding:40px 0; }
+      .section-title { font-size:clamp(1.85rem,7vw,2.3rem); }
+      .about-grid, .training-grid, .values { grid-template-columns:minmax(0,1fr); gap:13px; }
+      .card { padding:22px; border-radius:18px; }
+      .training-card { padding:21px; }
+      .training-number { margin-bottom:14px; }
+      .contact-card { flex-direction:column; align-items:stretch; gap:22px; padding:25px 21px; }
+      .contact-card .btn { width:100%; }
+      footer { align-items:flex-start; flex-direction:column; margin-top:28px; }
+    }
+    @media (max-width:380px) {
+      .wrap { width:calc(100% - 26px); }
+      h1 { font-size:2.3rem; }
+      .actions { flex-direction:column; }
+      .actions .btn { width:100%; }
+      .portrait-frame { width:145px; height:145px; }
+      .brand-text { font-size:.92rem; }
+      .brand-text small { font-size:.6rem; letter-spacing:1px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { animation:none !important; transition:none !important; }
+      .js-motion .reveal { opacity:1 !important; transform:none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#home" aria-label="Pramod Kumar Satyawali home">
+        <span class="brand-mark" aria-hidden="true">♞</span>
+        <span class="brand-text">PRAMOD KUMAR SATYAWALI<small>Chess Coach · National Instructor</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#training">Training</a>
+        <a href="#approach">My Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow">Founder & National Instructor</div>
+          <h1>Think deeper.<br />Play <span>smarter.</span></h1>
+          <p class="intro">I’m Pramod Kumar Satyawali, a Chess Coach and FIDE Approved National Instructor (NI). I help students strengthen their chess skills, build confidence and prepare to perform at their best over the board.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#training">Explore Training ♟</a>
+            <a class="btn" href="#contact">Connect with the Academy ↗</a>
+          </div>
+        </div>
+
+        <aside class="coach-art" aria-label="Coach profile">
+          <div class="coach-card">
+            <div class="portrait-frame">
+              <img class="portrait" id="coachPhoto" src="images/pramod-kumar-satyawali.png" alt="Pramod Kumar Satyawali, Chess Coach" hidden />
+              <div class="portrait-fallback" id="coachFallback" aria-label="Profile initials">PKS</div>
+            </div>
+            <h2>Pramod Kumar Satyawali</h2>
+            <p>Chess Coach & FIDE Approved National Instructor (NI)</p>
+            <div class="credential">Founder & National Instructor</div>
+            <div class="board-strip" aria-hidden="true">
+              <span>♜</span><span>♞</span><span>♝</span><span>♛</span><span>♚</span><span>♝</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="section-head">
+          <span class="section-label">Meet your coach</span>
+          <h2 class="section-title">More than just a game.</h2>
+          <p>Developing stronger players by building sound chess understanding, confidence and a thoughtful approach to every position.</p>
+        </div>
+        <div class="about-grid">
+          <div class="card about-card">
+            <p>As a Chess Coach and FIDE Approved National Instructor, I’m dedicated to helping students improve through structured learning, focused practice and a deeper understanding of the game.</p>
+            <p>Training is designed to develop practical playing skills—from recognising tactical opportunities to planning strategically and making better decisions under tournament pressure.</p>
+            <p>My goal is to help every student become a more independent, disciplined and confident player, both on the chessboard and beyond it.</p>
+          </div>
+          <div class="card quote-card">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <h3>Every move is a chance to learn, improve and think ahead.</h3>
+            <p>Build the habits that turn knowledge into confident decisions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="training">
+        <div class="section-head">
+          <span class="section-label">Training focus</span>
+          <h2 class="section-title">Build your game, one move at a time.</h2>
+          <p>Core areas of chess development, brought together to support well-rounded improvement and tournament readiness.</p>
+        </div>
+        <div class="training-grid">
+          <article class="card training-card">
+            <div class="training-number">01</div>
+            <h3>Opening Preparation</h3>
+            <p>Understand opening principles, develop a practical repertoire and reach playable middlegame positions.</p>
+          </article>
+          <article class="card training-card">
+            <div class="training-number">02</div>
+            <h3>Tactical Calculation</h3>
+            <p>Improve pattern recognition, calculate variations carefully and spot opportunities and threats.</p>
+          </article>
+          <article class="card training-card">
+            <div class="training-number">03</div>
+            <h3>Strategy & Endgames</h3>
+            <p>Learn positional planning, piece activity, pawn structures and essential endgame techniques.</p>
+          </article>
+          <article class="card training-card">
+            <div class="training-number">04</div>
+            <h3>Tournament Preparation</h3>
+            <p>Prepare for competitive play with game analysis, practical decision-making and focused practice.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="approach">
+        <div class="section-head">
+          <span class="section-label">Beyond the chessboard</span>
+          <h2 class="section-title">Skills that last a lifetime.</h2>
+          <p>Chess can help students develop habits that are valuable in learning, competition and everyday life.</p>
+        </div>
+        <div class="values">
+          <article class="card value-card">
+            <div class="value-icon" aria-hidden="true">◎</div>
+            <h3>Concentration</h3>
+            <p>Practise staying focused, observing carefully and considering the position before making a move.</p>
+          </article>
+          <article class="card value-card">
+            <div class="value-icon" aria-hidden="true">♜</div>
+            <h3>Discipline & Logic</h3>
+            <p>Build structured thinking, evaluate options and learn from both successful and difficult games.</p>
+          </article>
+          <article class="card value-card">
+            <div class="value-icon" aria-hidden="true">↗</div>
+            <h3>Confidence</h3>
+            <p>Make decisions with greater clarity, manage competitive pressure and keep learning with purpose.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card contact-card">
+          <div>
+            <span class="section-label">Start your chess journey</span>
+            <h2 class="section-title">Ready to make your next move?</h2>
+            <p>Interested in chess coaching or learning more about the academy? Get in touch to explore training options and find the next step in your chess journey.</p>
+          </div>
+          <a class="btn btn-primary" href="https://mastermindchessacademy.in/" target="_blank" rel="noopener noreferrer">Visit Mastermind Chess Academy ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Pramod Kumar Satyawali. All rights reserved.</p>
+      <p>Chess Coach · FIDE Approved National Instructor · Founder</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Show the coach's photo only when it loads; otherwise show initials.
+    (function () {
+      const photo = document.getElementById("coachPhoto");
+      const fallback = document.getElementById("coachFallback");
+      if (!photo || !fallback) return;
+
+      function updatePhoto() {
+        const loaded = photo.complete && photo.naturalWidth > 0 && photo.naturalHeight > 0;
+        photo.hidden = !loaded;
+        fallback.hidden = loaded;
+      }
+
+      photo.addEventListener("load", updatePhoto);
+      photo.addEventListener("error", updatePhoto);
+      if (photo.complete) updatePhoto();
+    })();
+
+    // Reveal content smoothly as it enters the viewport.
+    document.documentElement.classList.add("js-motion");
+    const revealItems = document.querySelectorAll(
+      "#about .section-head, #about .about-grid, #training .section-head, #training .training-card, #approach .section-head, #approach .value-card, #contact .contact-card"
+    );
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => {
+        item.classList.add("reveal");
+        observer.observe(item);
+      });
+    } else {
+      revealItems.forEach(item => item.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
